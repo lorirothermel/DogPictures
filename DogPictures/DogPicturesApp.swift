@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DogPicturesApp: App {
+    @StateObject var dogVM = DogViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dogVM)
         }
     }
 }
